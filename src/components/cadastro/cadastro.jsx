@@ -21,9 +21,14 @@ const Cadastro = () => {
             )
             .catch((error) => console.log("Erro ao cadastrar usuario:", error))
     };
+    const voltar = (e) =>{
+        e.preventDefault();
+        window.location.pathname = `/index/login`
+    }
 
     return (
         <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '0 auto' }}>
+        <div onClick={e => voltar(e)} className='botao-voltar'>◀</div>
             <h2>Cadastro</h2>
             <div className='login-input'></div>
             <div>
@@ -71,7 +76,7 @@ const Cadastro = () => {
                 </select>
             </div>
             <button type="submit">Cadastrar</button>
-        </form>
+        </form >
     );
 };
 

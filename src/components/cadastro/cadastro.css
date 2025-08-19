@@ -15,12 +15,6 @@ form h2 {
     color: #333;
 }
 
-.login-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    box-sizing: border-box;
-}
 
 form div {
     margin-bottom: 15px;
@@ -55,4 +49,20 @@ form button {
 
 form button:hover {
     background-color: #125ea2;
+}
+
+.login-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+.botao-voltar {
+    color: black;
+    background-color: #1976d2;
+    width: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
 }

@@ -1,12 +1,69 @@
-# React + Vite
+# Meu Projeto de Notas Pessoais
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **Visão Geral**
 
-Currently, two official plugins are available:
+Esta é uma **aplicação web completa** onde você pode **criar e gerenciar suas notas pessoais**. Cada usuário possui um espaço exclusivo, garantindo que suas anotações sejam acessíveis apenas por você. O projeto utiliza um **banco de dados local** para armazenamento de dados, sendo fácil de configurar e rodar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## **Funcionalidades Principais**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Autenticação de Usuários:** Crie novas contas e faça login para acessar suas notas.
+* **Notas Personalizadas:** Cada usuário pode criar e visualizar suas próprias notas.
+* **Armazenamento Local:** Dados persistidos em um banco de dados local.
+
+---
+
+## **Pré-requisitos**
+
+Certifique-se de ter o **Node.js** e o **npm** (Node Package Manager) instalados em sua máquina.
+
+---
+
+## **Instalação**
+
+Para configurar o ambiente do projeto, siga estes passos:
+
+1.  **Clone o repositório** para o seu computador.
+2.  Navegue até o diretório do projeto no seu terminal.
+3.  **Instale as dependências do Frontend (aplicação React):**
+
+    ```bash
+    npm install
+    ```
+
+    (Este comando deve ser executado na **pasta raiz** do projeto.)
+
+4.  **Instale as dependências do Backend (banco de dados local):**
+
+    ```bash
+    cd banco_de_dados
+    npm install
+    cd ..
+    ```
+
+    (Execute os comandos na ordem indicada para entrar e sair da pasta `banco_de_dados`.)
+
+---
+
+## **Inicialização**
+
+Para iniciar a aplicação, você precisará rodar o frontend e o backend separadamente:
+
+1.  **Inicie o Backend (Banco de Dados Local):**
+    Abra um novo terminal e navegue até a pasta `banco_de_dados`.
+
+    ```bash
+    cd banco_de_dados
+    node server.js
+    ```
+
+    Mantenha este terminal aberto enquanto a aplicação estiver em uso.
+
+2.  **Inicie o Frontend (Aplicação Web):**
+    Abra outro terminal e navegue até a **pasta raiz** do projeto.
+
+    ```bash
+    npm run dev
+    ```
