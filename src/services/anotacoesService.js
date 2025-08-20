@@ -46,10 +46,7 @@ export const atualizarAnotacao = async (anotacao) => {
 //FAZ DELETE NO BANCO DE DADOS
 export const deletarNota = async (anotacao) => {
   const response = await fetch(`http://localhost:3000/anotacoes/${anotacao.id_anotacao}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    method: 'DELETE'
   });
   if (!response.ok) throw new Error('Erro ao excluir nota');
   console.log("FUNCAO deletarNota EXECUTADA!");

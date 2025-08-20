@@ -15,6 +15,7 @@ function Login() {
                 }
                 else if (senha == dados[0].senha) {
                     alert("Login realizado com sucesso")
+                    sessionStorage.setItem("usuario", JSON.stringify(dados[0]));
                     window.location.pathname = `/index/anotacoes/${dados[0].id}`;
                     return;
                 }

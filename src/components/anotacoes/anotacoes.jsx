@@ -11,9 +11,10 @@ const Anotacoes = () => {
     const [textoAnotacoes, setTextoAnotacoes] = useState({});
     const [horario, setHorario] = useState();
     const id_usuario  = useParams().id_usuario;
+    const usuario = JSON.parse(sessionStorage.getItem("usuario"));
 
     useEffect(() => {
-        console.log(`Usuario conectado: ${id_usuario}`)
+        console.log(`Usuario conectado: ${id_usuario}`) 
         buscarAnotacoes(id_usuario)
             .then(setAnotacoes)
             .catch((error) => console.log("Erro ao buscar anotações:", error));
@@ -95,6 +96,7 @@ const Anotacoes = () => {
 
     return (
         <>
+            <h1>Ola seja bem vindo, <b>{usuario.nome}</b></h1>
             <h1>{horario}</h1>
             <div className="principal">
                 <div className="anotacao">
